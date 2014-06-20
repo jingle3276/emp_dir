@@ -27,7 +27,8 @@ directory.Router = Backbone.Router.extend({
 
     routes: {
         "":                 "home",
-        "employees/:id":    "employeeDetails"
+        "employees/:id":    "employeeDetails",
+        "grid": "grid"
     },
 
     initialize: function () {
@@ -49,6 +50,11 @@ directory.Router = Backbone.Router.extend({
         }
         this.$content.html(directory.homelView.el);
         //directory.shellView.selectMenuItem('home-menu');
+    },
+
+    grid: function () {
+        //alert("in grid view");
+        //TODO render gridView 
     }
 
 });
