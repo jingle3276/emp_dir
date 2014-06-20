@@ -31,9 +31,7 @@ directory.Router = Backbone.Router.extend({
     },
 
     initialize: function () {
-        directory.shellView = new directory.ShellView();
-        $('body').html(directory.shellView.render().el);
-        // Close the search dropdown on click anywhere in the UI
+
         $('body').click(function () {
             $('.dropdown').removeClass("open");
         });
@@ -50,7 +48,7 @@ directory.Router = Backbone.Router.extend({
             directory.homelView.delegateEvents(); // delegate events when the view is recycled
         }
         this.$content.html(directory.homelView.el);
-        directory.shellView.selectMenuItem('home-menu');
+        //directory.shellView.selectMenuItem('home-menu');
     }
 
 });
